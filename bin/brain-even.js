@@ -6,7 +6,7 @@ const userName = greeting();
 
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 const arr = [15, 6, 7];
-let lastAnswer = '';
+let isLastAnswerCorrect;
 for (let i = 0; i < arr.length; i += 1) {
   console.log(`Question: ${arr[i]}`);
   let rightAnswer = 'no';
@@ -14,17 +14,16 @@ for (let i = 0; i < arr.length; i += 1) {
     rightAnswer = 'yes';
   }
   const answer = readlineSync.question('');
-  if (answer === rightAnswer) {
+  isLastAnswerCorrect = answer === rightAnswer;
+  if (isLastAnswerCorrect) {
     console.log('Correct!');
-    lastAnswer = 'correct';
   } else {
-    lastAnswer = 'incorrect';
     console.log('"yes" is wrong answer ;(. Correct answer was "no".');
     console.log(`Let's try again, ${userName}!`);
     break;
   }
 }
 
-if (lastAnswer === 'correct') {
+if (isLastAnswerCorrect) {
   console.log(`Congratulations, ${userName}!`);
 }
