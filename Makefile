@@ -9,3 +9,6 @@ publish: #dry run
 
 lint: #start eslint checking
 	npx eslint .
+
+lint-fix: #start eslint checking with fixing
+	npx eslint --fix .
