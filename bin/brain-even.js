@@ -4,8 +4,14 @@ import greeting from '../src/cli.js';
 
 const userName = greeting();
 
+const getRandomNumber = (min, max) => Math.round(Math.random() * (max - min) + min);
+
+const arr = [];
+for (let i = 0; i < 3; i += 1) {
+  arr[i] = getRandomNumber(1, 101);
+}
+
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
-const arr = [15, 6, 7];
 let isLastAnswerCorrect;
 for (let i = 0; i < arr.length; i += 1) {
   console.log(`Question: ${arr[i]}`);
