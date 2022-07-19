@@ -30,8 +30,8 @@ for (let i = 0; i < 3; i += 1) {
       rightAnswer = NaN;
   }
 
-  const answer = Number(readlineSync.question(''));
-  isLastAnswerCorrect = answer === rightAnswer;
+  const answer = readlineSync.question('');
+  isLastAnswerCorrect = Number(answer) === rightAnswer;
   if (isLastAnswerCorrect) {
     console.log('Correct!');
   } else {
