@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 import greeting from '../src/cli.js';
+import getRandomNumber from '../src/index.js';
 
 const userName = greeting();
-
-const getRandomNumber = (min, max) => Math.round(Math.random() * (max - min) + min);
 
 const arr = [];
 for (let i = 0; i < 3; i += 1) {
