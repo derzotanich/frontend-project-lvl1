@@ -10,9 +10,9 @@ const arrMathSymb = ['+', '-', '*'];
 console.log('What is the result of the expression?');
 let isLastAnswerCorrect;
 for (let i = 0; i < 3; i += 1) {
-  const firstNum = getRandomNumber(1, 101);
+  const firstNum = getRandomNumber(1, 100);
   const secondNum = getRandomNumber(1, 11);
-  const operator = arrMathSymb[getRandomNumber(0, 3)];
+  const operator = arrMathSymb[getRandomNumber(0, 2)];
   console.log(`Question: ${firstNum} ${operator} ${secondNum}`);
 
   let rightAnswer = 0;
