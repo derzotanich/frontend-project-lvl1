@@ -7,11 +7,15 @@ const userName = greeting();
 
 const arr = [];
 for (let i = 0; i < 3; i += 1) {
-  arr[i] = getRandomNumber(1, 101);
+  arr[i] = getRandomNumber(2, 101);
 }
 
 const isPrime = (num) => {
-  for (let j = 0; j < num; j += 1) {
+  if (num === 2) {
+    return 'yes';
+  }
+
+  for (let j = 2; j < num; j += 1) {
     if (num % j === 0) {
       return 'no';
     }
