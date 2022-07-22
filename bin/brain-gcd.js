@@ -5,11 +5,6 @@ import getRandomNumber from '../src/index.js';
 
 const userName = greeting();
 
-const arr = [];
-for (let i = 0; i < 3; i += 1) {
-  arr[i] = getRandomNumber(1, 101);
-}
-
 const gcd = (a, b) => {
   if (b === 0) {
     return a;
