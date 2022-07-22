@@ -12,8 +12,8 @@ for (let i = 0; i < 3; i += 1) {
   const arrLength = getRandomNumber(5, 11);
   const arrStep = getRandomNumber(1, 11);
   arr[0] = getRandomNumber(1, 101);
-  for (let i = 1; i < arrLength; i += 1) {
-    arr[i] = arr[i - 1] + arrStep;
+  for (let j = 1; j < arrLength; j += 1) {
+    arr[j] = arr[j - 1] + arrStep;
   }
   const iSecret = getRandomNumber(1, arrLength);
   const rightAnswer = arr[iSecret];
